@@ -1,0 +1,16 @@
+.top-bar-container {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(184, 22, 22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &__logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+}
