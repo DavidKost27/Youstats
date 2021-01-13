@@ -5,12 +5,12 @@ import axios from "axios";
 
 // Importing Components
 import TopBar from "./components/TopBar";
-import Footer from "./components/Footer";
+import SerachInput from "./components/SearchInput";
+import StatsCard from "./components/StatsCard";
 
 function App() {
-  const [channelAvatar, setChannelAvatar] = useState(
-    "https://treepress.net/wp-content/plugins/treepress/public/imgs/no-avatar.png"
-  );
+  const [channelBanner, setChannelBanner] = useState("null");
+  const [channelAvatar, setChannelAvatar] = useState("null");
   const [channelStats, setChannelStats] = useState({
     Subscribers: 0,
     Uploaded_Videos: 0,
@@ -21,13 +21,16 @@ function App() {
   const apiRequestHandler = () => {
     axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/channels?part=snippet&part=statistics&forUsername=${userInput}&key=${process.env.REACT_APP_API_KEY}`
+        `https://youtube.googleapis.com/youtube/v3/channels?part=brandingSettings&part=snippet&part=statistics&forUsername=${userInput}&key=${process.env.REACT_APP_API_KEY}`
       )
       .then((response) => {
         if (response.data.items) {
           const channelStats = response.data.items[0].statistics;
           setChannelAvatar(
             response.data.items[0].snippet.thumbnails.default.url
+          );
+          setChannelBanner(
+            response.data.items[0].brandingSettings.image.bannerExternalUrl
           );
           const { viewCount, subscriberCount, videoCount } = channelStats;
           setChannelStats({
@@ -57,35 +60,20 @@ function App() {
 
       <div className="hero-section-container">
         {/* Search By YouTube Username */}
-        <form className="search-container" onSubmit={submitHandler}>
-          YouTube Stats:
-          <input
-            className="search-container__user-input"
-            type="text"
-            placeholder="Type a YouTube Channel Name"
-            onChange={handleOnChange}
-          ></input>
-          <button className="search-container__submit-button">Submit</button>
-        </form>
+        <SerachInput
+          submitHandler={submitHandler}
+          handleOnChange={handleOnChange}
+        />
         {/*  */}
 
-        <div className="stats-card">
-          <img
-            className="stats-card__channel-avatar"
-            src={channelAvatar}
-            alt=""
-          />
-          {channelStats &&
-            Object.entries(channelStats).map((item, index) => (
-              <div className="stats-card__displayed-stats" key={index}>
-                {" "}
-                <h2>{item[0].replace("_", " ")}</h2>{" "}
-                <span>{parseInt(item[1]).toLocaleString()}</span>
-              </div>
-            ))}
-        </div>
+        {/* Stats Card to ShowCase all the stats */}
+        <StatsCard
+          channelAvatar={channelAvatar}
+          channelBanner={channelBanner}
+          channelStats={channelStats}
+        />
+        {/*  */}
       </div>
-      <Footer />
     </div>
   );
 }

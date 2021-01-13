@@ -1,0 +1,51 @@
+.search-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding-top: 20px;
+  text-align: center;
+  color: rgb(211, 211, 211);
+  .wrapper {
+    position: relative;
+    .MuiFormLabel-root {
+      color: rgb(255, 255, 255);
+    }
+    .MuiFormLabel-root.Mui-focused {
+      color: rgb(223, 172, 31);
+    }
+
+    .MuiInputBase-root {
+      color: rgb(255, 255, 255);
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border-color: rgb(255, 166, 0);
+      border-width: 2px;
+    }
+    .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+      border-color: rgb(196, 140, 38);
+    }
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: rgb(255, 166, 0);
+      -webkit-box-shadow: 0px 3px 17px 0px rgba(255, 171, 41, 0.72);
+      box-shadow: 0px 3px 17px 0px rgba(255, 171, 41, 0.72);
+    }
+    #outlined-basic {
+      width: 272px;
+      outline: none;
+    }
+    &__user-input {
+    }
+    &__submit-button {
+      background-color: rgb(58, 58, 58);
+      position: absolute;
+      height: 56px;
+      top: -0.5px;
+      right: 0;
+      border: 2px solid rgb(255, 166, 0);
+      border-radius: 0 4px 4px 0;
+    }
+    #search-icon {
+      color: rgb(255, 255, 255);
+    }
+  }
+}

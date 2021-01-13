@@ -1,25 +1,7 @@
 .App {
   .hero-section-container {
+    background-color: black;
     width: 100vw;
-    height: calc(100vh - 60px);
-    margin-top: 60px;
-    background-color: rgb(145, 39, 39);
-  }
-
-  .search-container {
-    &__user-input {
-    }
-    &__submit-button {
-    }
-  }
-
-  .stats-card {
-    &__channel-avatar {
-      width: 88px;
-      height: 88px;
-    }
-    &__displayed-stats {
-      color: white;
-    }
+    height: 100vh;
   }
 }
