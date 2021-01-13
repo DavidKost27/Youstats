@@ -11,7 +11,7 @@ export default function SearchInput(props) {
       <div className="wrapper">
         <TextField
           id="outlined-basic"
-          label="Type a YouTube Channel Name"
+          label="Type a Channel Name"
           variant="outlined"
           onChange={props.handleOnChange}
         />

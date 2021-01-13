@@ -1,4 +1,5 @@
 .App {
+  background-color: black;
   .hero-section-container {
     background-color: black;
     width: 100vw;
@@ -8,12 +9,12 @@
 
     // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
     #SearchInput {
-      padding-top: 50px;
+      padding-top: 30px;
     }
 
     // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
     #StatsCard {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 }
