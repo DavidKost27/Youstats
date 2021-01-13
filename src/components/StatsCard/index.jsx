@@ -2,7 +2,11 @@ import "./styles.scss";
 
 export default function StatsCard(props) {
   return (
-    <div className="stats-card-container">
+    <div
+      id="StatsCard"
+      className="stats-card-container"
+      style={{ visibility: `${props.statsCardVisibilety}` }}
+    >
       <div
         className="branding-container"
         style={{ backgroundImage: `url(${props.channelBanner})` }}

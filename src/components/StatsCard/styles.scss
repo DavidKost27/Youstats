@@ -1,30 +1,39 @@
 .stats-card-container {
-  // visibility: hidden;
+  border-radius: 20px 20px 15px 15px;
+  border: 2px solid rgb(255, 166, 0);
+  -webkit-box-shadow: 0px 3px 17px 0px rgba(255, 171, 41, 0.72);
+  box-shadow: 0px 3px 17px 0px rgba(255, 171, 41, 0.72);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
 
-  border-radius: 55px 55px 15px 15px;
-  border: 7px solid rgb(94, 94, 94);
   .branding-container {
-    border-radius: 50px 50px 0 0;
+    border-radius: 20px 20px 0 0;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 210px;
+    height: 165px;
     display: flex;
     justify-content: center;
-
     &__avatar {
       border-radius: 100px;
-      width: 88px;
-      height: 88px;
-      margin-top: 150px;
+      width: 78px;
+      height: 78px;
+      margin-top: 120px;
+      outline: none;
+      border: none;
     }
   }
 
   .stats-card-container {
-    background-color: rgb(214, 116, 4);
+    background-color: rgb(0, 0, 0);
     border: none;
-    border-radius: 0 0 10px 10px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    border-radius: 0 0 15px 15px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    height: calc(100% - 165px);
+    box-sizing: content-box;
     .stats-card__displayed-stats {
       display: flex;
       flex-direction: column;
@@ -34,6 +43,8 @@
       &__headers {
         font-size: 20px;
         font-weight: bold;
+        color: rgba(255, 123, 0, 0.795);
+        padding-bottom: 5px;
       }
       &__numbers {
         font-size: 18px;
@@ -42,4 +53,42 @@
       }
     }
   }
+}
+
+// Ipad\Tablet - 768 px
+@media only screen and (min-width: 768px) {
+  .stats-card-container {
+    max-width: 500px;
+
+    .branding-container {
+      height: 265px;
+
+      &__avatar {
+        margin-top: 220px;
+        width: 98px;
+        height: 98px;
+      }
+    }
+
+    .stats-card-container {
+      padding-top: 55px;
+      .stats-card__displayed-stats {
+        &__headers {
+          font-size: 30px;
+        }
+        &__numbers {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+// Web - 1280 px
+@media only screen and (min-width: 1280px) {
+}
+// Web - 1440 px
+@media only screen and (min-width: 1440px) {
+}
+// Web - 1920 px
+@media only screen and (min-width: 1920px) {
 }

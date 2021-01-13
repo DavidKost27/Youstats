@@ -2,6 +2,82 @@
   .hero-section-container {
     background-color: black;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    padding: 0 40px;
+
+    // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+    #SearchInput {
+      padding-top: 50px;
+    }
+
+    // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+    #StatsCard {
+      margin-top: 50px;
+    }
+  }
+}
+
+// Ipad\Tablet - 768 px
+@media only screen and (min-width: 768px) {
+}
+// Web - 1280 px
+@media only screen and (min-width: 1280px) {
+  .App {
+    .hero-section-container {
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #SearchInput {
+        padding-top: 20px;
+      }
+
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #StatsCard {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+// Web - 1440 px
+@media only screen and (min-width: 1440px) {
+  .App {
+    .hero-section-container {
+      background-color: black;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      margin-top: 60px;
+      padding: 0 40px;
+
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #SearchInput {
+        padding-top: 50px;
+      }
+
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #StatsCard {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+// Web - 1920 px
+@media only screen and (min-width: 1920px) {
+  .App {
+    .hero-section-container {
+      background-color: black;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      margin-top: 60px;
+      padding: 0 40px;
+
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #SearchInput {
+        padding-top: 80px;
+      }
+
+      // SearchInput Padding or Margin goes here(DONT GIVE COMPONENTS PADDINGS OR MARGINS inside of the component scss file)
+      #StatsCard {
+        margin-top: 40px;
+      }
+    }
   }
 }

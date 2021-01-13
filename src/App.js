@@ -38,6 +38,8 @@ function App() {
             Uploaded_Videos: videoCount,
             Total_Views: viewCount,
           });
+
+          setstatsCardVisibilety("visible");
         } else {
           console.log("Channel was not found");
         }
@@ -53,6 +55,9 @@ function App() {
   const handleOnChange = (event) => {
     setUserInput(event.target.value);
   };
+
+  // Uncovering the Stats Card
+  const [statsCardVisibilety, setstatsCardVisibilety] = useState("hidden");
 
   return (
     <div className="App">
@@ -71,6 +76,7 @@ function App() {
           channelAvatar={channelAvatar}
           channelBanner={channelBanner}
           channelStats={channelStats}
+          statsCardVisibilety={statsCardVisibilety}
         />
         {/*  */}
       </div>

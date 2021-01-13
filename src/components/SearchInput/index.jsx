@@ -3,7 +3,11 @@ import TextField from "@material-ui/core/TextField";
 
 export default function SearchInput(props) {
   return (
-    <form className="search-container" onSubmit={props.submitHandler}>
+    <form
+      id="SearchInput"
+      className="search-container"
+      onSubmit={props.submitHandler}
+    >
       <div className="wrapper">
         <TextField
           id="outlined-basic"
